@@ -1,8 +1,7 @@
 import cv2
 import numpy as np
-import re
-import skimage
 import random as r
+import skimage
 
 cv2 = cv2.cv2
 
@@ -239,8 +238,8 @@ def addLogoToImage(image, logo):
 def addApprovedToImage(image, approved):
 
     h, w = image.shape[:2]
-    x_offset=w-w + 100
-    y_offset=int(h/2)+300
+    x_offset = w-w + 100
+    y_offset = int(h/2)+300
     # image[y_offset:y_offset+approved.shape[0], x_offset:x_offset+approved.shape[1]] = approved
 
     # approved = cv2.resize(approved)

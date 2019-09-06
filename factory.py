@@ -1,11 +1,11 @@
-from PIL import Image
-import shadow_maker as sm
-import weighted as w
 import cv2
 import random as r
 
+import shadow_maker as sm
+import weighted as w
+
 cv2 = cv2.cv2
-num = 37
+num = 50
 
 pathToFinal = './final/'
 pathToBg = './bg/'

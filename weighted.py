@@ -1,7 +1,9 @@
 # import OpenCV file 
 import cv2
-import resize as rs
 import random as r
+
+import make_image_3d as d3
+import resize as rs
 
 cv2 = cv2.cv2
 
@@ -23,6 +25,7 @@ def placeImageOnBackground(inputImg, backImg):
     # Load two images
     # backImg = cv2.imread('./bg/38.jpeg')
     # inputImg = cv2.imread('./backgrounds/shadow_image.png')
+    inputImg = d3.make_3d(inputImg)
 
     print(inputImg.shape)
     print(backImg.shape)
@@ -58,4 +61,5 @@ def placeImageOnBackground(inputImg, backImg):
     backImg[row_pad:rows+row_pad, col_pad:cols+col_pad] = dst
 
     # cv2.imwrite('./backgrounds/out.jpg', backImg)
-    return backImg
+    # backImg = d3.make_3d(backImg)
+    return backImg[row_pad-200:rows+row_pad, col_pad-200:cols+col_pad]
